@@ -6,12 +6,23 @@ import {
 } from "@nativescript/angular";
 
 const routes: Routes = [
+  // {
+  //   path: "",
+  //   redirectTo: "/(homeTab:home/default)",
+  //   pathMatch: "full",
+  // },
   {
     path: "",
-    redirectTo: "/(cameraTab:camera/default)",
+    redirectTo: "/(homeTab:home/default//cameraTab:camera/default)",
     pathMatch: "full",
   },
-
+  {
+    path: "home",
+    component: NSEmptyOutletComponent,
+    loadChildren: () =>
+      import("~/app/modules/receipt").then((m) => m.ReceiptModule),
+    outlet: "homeTab",
+  },
   {
     path: "camera",
     component: NSEmptyOutletComponent,
