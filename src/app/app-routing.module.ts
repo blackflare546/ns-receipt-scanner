@@ -6,11 +6,6 @@ import {
 } from "@nativescript/angular";
 
 const routes: Routes = [
-  // {
-  //   path: "",
-  //   redirectTo: "/(homeTab:home/default)",
-  //   pathMatch: "full",
-  // },
   {
     path: "",
     redirectTo:
