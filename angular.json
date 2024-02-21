@@ -1,0 +1,15 @@
+{
+    "version": 1,
+    "cli": {
+        "defaultCollection": "@nativescript/schematics"
+    },
+    "projects": {
+        "ns-receipt-scanner": {
+            "root": "",
+            "sourceRoot": "src",
+            "projectType": "application",
+            "prefix": "ns"
+        }
+    },
+    "defaultProject": "ns-receipt-scanner"
+}
