@@ -13,7 +13,8 @@ const routes: Routes = [
   // },
   {
     path: "",
-    redirectTo: "/(homeTab:home/default//cameraTab:camera/default)",
+    redirectTo:
+      "/(homeTab:home/default//cameraTab:camera/default//reportTab:report/default)",
     pathMatch: "full",
   },
   {
@@ -29,6 +30,13 @@ const routes: Routes = [
     loadChildren: () =>
       import("~/app/modules/camera").then((m) => m.CameraModule),
     outlet: "cameraTab",
+  },
+  {
+    path: "report",
+    component: NSEmptyOutletComponent,
+    loadChildren: () =>
+      import("~/app/modules/report").then((m) => m.ReportModule),
+    outlet: "reportTab",
   },
 ];
 
