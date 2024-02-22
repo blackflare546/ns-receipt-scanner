@@ -7,7 +7,6 @@ import { BaseComponent } from "~/app/core/models/components/base-component.model
   styleUrls: ["./receipt.component.scss"],
 })
 export class ReceiptComponent extends BaseComponent {
-  currentDate: Date = new Date();
   receiptData: { text: string; date: Date }[] = [
     { text: "v1", date: new Date() },
     { text: "v2", date: new Date() },
