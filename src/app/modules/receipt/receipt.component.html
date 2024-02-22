@@ -1,14 +1,41 @@
 <ActionBar flat="true" class="actionbar">
-  <StackLayout
-    orientation="horizontal"
-    ios:horizontalAlignment="center"
-    android:horizontalAlignment="left"
-  >
-    <Label text="Home" class="actionbar--title"></Label>
-  </StackLayout>
+  <Label text="Dashboard" class="actionbar--title"></Label>
 </ActionBar>
+<!-- parent -->
+<GridLayout columns="auto, auto" rows="*, *, auto" class="parent-container">
+  <!-- receipts and currency -->
+  <GridLayout rows="auto,auto" columns="*, *" class="receipts-list">
+    <Label col="0">Receipts</Label>
 
-<GridLayout class="page__content">
-  <MDCardView rippleColor="blue"  width="100" height="100"></MDCardView>
-  <Label class="page__content-icon fas" text="&#xf002;">Home</Label>
+    <!-- date grid  -->
+  </GridLayout>
+  <MDCardView rippleColor="blue" width="100" height="100" />
+
+  <GridLayout row="1"> </GridLayout>
+
+  <!-- MAO NING RED -->
+  <GridLayout row="2" rows="*" class="receipt-container">
+    <GridLayout row="0" rows="*" class="receipt-container__data">
+      <ScrollView>
+        <StackLayout padding="12">
+          <GridLayout
+            row="0"
+            rows="*,*"
+            columns="*,auto,*"
+            *ngFor="let item of receiptData; let i = index"
+            class="receipt-data"
+          >
+            <GridLayout col="0"></GridLayout>
+            <Label col="1" class="date-container">
+              {{ currentDate | formatDate }} | &#8369;0
+            </Label>
+
+            <Label row="1">{{ item.text }}</Label>
+          </GridLayout>
+
+          <!-- Using ngFor to iterate over receiptData array -->
+        </StackLayout>
+      </ScrollView>
+    </GridLayout>
+  </GridLayout>
 </GridLayout>
