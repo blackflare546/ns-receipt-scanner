@@ -1,2 +1,33 @@
+.parent-container {
+  padding: 15;
+}
+.receipts-list {
+  font-size: 16;
+  font-weight: bold;
+}
+.receipt-container {
+  height: 50%;
+  border-radius: 20;
+  background-color: black;
+  padding: 10;
+  margin-left: 4;
+  width: 90%;
+  align-self: center;
+  &__data {
+    border-radius: 20;
+    background-color: orange;
+  }
+}
 
+.date-container {
+  background-color: rgba(161, 141, 141, 0.834);
+  padding: 4;
+  height: auto;
+  border-radius: 30;
+}
 
+.receipt-data {
+  border-bottom-width: 1;
+  margin-bottom: 5;
+  width: 100%;
+}
