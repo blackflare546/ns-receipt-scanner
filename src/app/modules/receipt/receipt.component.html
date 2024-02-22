@@ -1,17 +1,18 @@
 <ActionBar flat="true" class="actionbar">
-  <Label text="Dashboard" class="actionbar--title"></Label>
+  <Label text="user name" class="actionbar--title"></Label>
 </ActionBar>
 <!-- parent -->
-<GridLayout columns="auto, auto" rows="*, *, auto" class="parent-container">
+<GridLayout columns="auto, auto" rows="*, auto, auto" class="parent-container">
   <!-- receipts and currency -->
-  <GridLayout rows="auto,auto" columns="*, *" class="receipts-list">
-    <Label col="0">Receipts</Label>
-
+  <GridLayout rows="auto,auto" columns="auto, auto" class="header">
+    <Label col="0">You have spend </Label>
+    <Label col="1">&#8369;1,000,000 </Label>
     <!-- date grid  -->
   </GridLayout>
-  <MDCardView rippleColor="blue" width="100" height="100" />
 
-  <GridLayout row="1"> </GridLayout>
+  <GridLayout row="1">
+    <Label col="0" class="label-style">List of Receipts</Label></GridLayout
+  ><MDCardView rippleColor="red" width="100" height="100"></MDCardView>
 
   <!-- MAO NING RED -->
   <GridLayout row="2" rows="*" class="receipt-container">
@@ -27,10 +28,10 @@
           >
             <GridLayout col="0"></GridLayout>
             <Label col="1" class="date-container">
-              {{ currentDate | formatDate }} | &#8369;0
+              {{ item.date | formatDate }} | &#8369;0
             </Label>
 
-            <Label row="1">{{ item.text }}</Label>
+            <Label class="receipt-data--label" row="1">{{ item.text }}</Label>
           </GridLayout>
 
           <!-- Using ngFor to iterate over receiptData array -->
