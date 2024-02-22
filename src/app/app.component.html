@@ -3,9 +3,7 @@
     <page-router-outlet name="homeTab"></page-router-outlet>
   </GridLayout>
 
-  <GridLayout *tabItem="{ title: 'Camera' }">
-    <page-router-outlet name="cameraTab"></page-router-outlet>
-  </GridLayout>
+  <Button *tabItem="{ title: 'Take Photo' }" text="Take Photo" (tap)="onTakePhotoButtonTap()"></Button>
 
   <GridLayout *tabItem="{ title: 'Report' }">
     <page-router-outlet name="reportTab"></page-router-outlet>
