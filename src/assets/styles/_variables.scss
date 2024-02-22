@@ -1,0 +1,62 @@
+//Changed
+
+$primary: #f06f00;
+$primary-darker: darken($primary, 10%);
+$primary-dark: darken($primary, 5%);
+$primary-light: lighten($primary, 5%);
+$primary-lighter: lighten($primary, 10%);
+
+$secondary: #003366;
+$secondary-darker: darken($secondary, 10%);
+$secondary-dark: darken($secondary, 5%);
+$secondary-light: lighten($secondary, 5%);
+$secondary-lighter: lighten($secondary, 10%);
+
+$gray: #e6e6e6;
+$gray-darker: darken($gray, 10%);
+$gray-dark: darken($gray, 5%);
+$gray-light: lighten($gray, 5%);
+$gray-lighter: lighten($gray, 10%);
+
+$red: #f00000;
+$red-darker: darken($red, 10%);
+$red-dark: darken($red, 5%);
+$red-light: lighten($red, 5%);
+$red-lighter: lighten($red, 10%);
+
+$green: #2eb855;
+$green-darker: darken($green, 10%);
+$green-dark: darken($green, 5%);
+$green-light: lighten($green, 5%);
+$green-lighter: lighten($green, 10%);
+
+$white: #ffffff;
+$white-dark: #f7f7f7;
+$black: #1d1d1d;
+
+$orange: #fb9f19;
+$orange-dark: #f17d07;
+
+$blue: #053265;
+$blue-darker: #031933;
+
+$auth-background: linear-gradient(213deg, $blue, $blue-darker);
+
+//Buttons
+$btn-font-weight: 600;
+
+//Input Form
+$inputfield-border-color: #bec6d0;
+$item-label-color: #878787;
+
+//Fonts
+$font-regular: OpenSans-Regular;
+$font-semi-bold: OpenSans-SemiBold;
+$font-semi-bold-italic: OpenSans-SemiBoldItalic;
+$font-bold: OpenSans-Bold;
+$font-bold-italic: OpenSans-BoldItalic;
+$font-extra-bold: OpenSans-ExtraBold;
+$font-extra-bold-italic: OpenSans-ExtraBoldItalic;
+$font-italic: OpenSans-Italic;
+$font-light: OpenSans-Light;
+$font-light-italic: OpenSans-LightItalic;

@@ -1,7 +1,13 @@
-<ActionBar>
-    <Label text="Home"></Label>
+<ActionBar flat="true" class="actionbar">
+  <StackLayout
+    orientation="horizontal"
+    ios:horizontalAlignment="center"
+    android:horizontalAlignment="left"
+  >
+    <Label text="Home" class="actionbar--title"></Label>
+  </StackLayout>
 </ActionBar>
 
 <GridLayout class="page__content">
-    <Label class="page__content-icon fas" text="&#xf002;">Home</Label>
+  <Label class="page__content-icon fas" text="&#xf002;">Home</Label>
 </GridLayout>
