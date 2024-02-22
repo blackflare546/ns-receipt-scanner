@@ -2,8 +2,15 @@
 @import "@nativescript/theme/default";
 @import "./assets/styles/variables";
 
+
 .actionbar {
-  background-color: $black;
+  background-color: $primary;
+  &--title {
+    font-size: 17;
+    font-family: $font-bold;
+    font-weight: bold;
+    color: $secondary;
+  }
 }
 
 .small-fab {
