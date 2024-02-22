@@ -12,7 +12,8 @@
   position: absolute;
   left: 50%; 
   transform: translateX(110%);
-  bottom: 20px;  
+  bottom: 20px; 
+  background-color: white
 }
 
 
@@ -20,7 +21,7 @@ MDFloatingActionButton {
   @extend .small-fab;
   font-size: 32; 
   padding-right: -2;
-  padding-left: 9;
+  padding-left: 10;
 }
 
 .m-icon { 
