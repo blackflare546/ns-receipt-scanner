@@ -1,11 +1,29 @@
-<TabView androidTabsPosition="bottom">
-  <GridLayout *tabItem="{ title: 'Home' }">
-    <page-router-outlet name="homeTab"></page-router-outlet>
-  </GridLayout>
+<AbsoluteLayout>
+  <MDBottomNavigation  selectedIndex="0" width="100%" height="100%" top="0">
+      <!-- The bottom tab UI is created via TabStrip (the container) and TabStripItem (for each tab)-->
+      <MDTabStrip >
+          <MDTabStripItem >
+            <Label text="&#xe873;" class="m-icon m-icon-font-size "></Label>
+          </MDTabStripItem>
+          <MDTabStripItem>
+              <Label text="&#xe88a;" class="m-icon m-icon-font-size"  ></Label>
+          </MDTabStripItem>
+      </MDTabStrip>
 
-  <Button *tabItem="{ title: 'Take Photo' }" text="Take Photo" (tap)="onTakePhotoButtonTap()"></Button>
+      <!-- The number of TabContentItem components should correspond to the number of TabStripItem components -->
+      <MDTabContentItem > 
+          <GridLayout>
+              <page-router-outlet name="homeTab"></page-router-outlet>
+          </GridLayout>
+      </MDTabContentItem>
 
-  <GridLayout *tabItem="{ title: 'Report' }">
-    <page-router-outlet name="reportTab"></page-router-outlet>
-  </GridLayout>
-</TabView>
+      <MDTabContentItem>
+          <GridLayout>
+              <page-router-outlet name="reportTab"></page-router-outlet>
+          </GridLayout>
+      </MDTabContentItem>
+  </MDBottomNavigation>
+
+  <!-- Floating action button -->
+  <MDFloatingActionButton rippleColor="blue" text="&#xe3b4;" class="small-fab m-icon"  top="680%" left="165%" ></MDFloatingActionButton>
+</AbsoluteLayout>

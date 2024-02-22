@@ -1515,10 +1515,25 @@
   resolved "https://registry.npmjs.org/@leichtgewicht/ip-codec/-/ip-codec-2.0.4.tgz"
   integrity sha512-Hcv+nVC0kZnQ3tD9GVu5xSMR4VVYOteQIr/hwFPVEvPdlXqgGEuRjiheChHgdM+JyqdgNcmzZOX/tnl0JOiI7A==
 
+"@nativescript-community/ui-material-bottom-navigation@^7.2.44":
+  version "7.2.44"
+  resolved "https://registry.yarnpkg.com/@nativescript-community/ui-material-bottom-navigation/-/ui-material-bottom-navigation-7.2.44.tgz#06b03c8eb96469ef030d1e455268e161b0454b26"
+  integrity sha512-49LMZAvZK87R7+Xh24o7dN7mPL9VKeKzjK3vydWlucoL6n7kx1k0PfEYjjgyz85Gdy23xx5nN+vz4kUxYDda0g==
+  dependencies:
+    "@nativescript-community/ui-material-core" "^7.2.44"
+    "@nativescript-community/ui-material-core-tabs" "^7.2.44"
+
 "@nativescript-community/ui-material-cardview@^7.2.44":
   version "7.2.44"
   resolved "https://registry.yarnpkg.com/@nativescript-community/ui-material-cardview/-/ui-material-cardview-7.2.44.tgz#27adecb00796dee717124a3689fac72966154705"
   integrity sha512-S8+knCMAGqag3J6JkrWLxTjzU1GeX/3MGi2R8NvM0cfFVA7OSzXMioQUnRt+cun86OtjdSw4kKAHxgKmHLkZfQ==
+  dependencies:
+    "@nativescript-community/ui-material-core" "^7.2.44"
+
+"@nativescript-community/ui-material-core-tabs@^7.2.44":
+  version "7.2.44"
+  resolved "https://registry.yarnpkg.com/@nativescript-community/ui-material-core-tabs/-/ui-material-core-tabs-7.2.44.tgz#114ac5438e74f98243c9749954cb3796c581d365"
+  integrity sha512-8GFUnUxnbOH4N9729w93LGDCe0C9bVlPqePo90eOSdfpXQoMxJzsOMCr+QNm9nN5keMDuvS5fuzHp2u+Y9yUQw==
   dependencies:
     "@nativescript-community/ui-material-core" "^7.2.44"
 
