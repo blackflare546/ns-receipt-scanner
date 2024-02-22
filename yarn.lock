@@ -1515,6 +1515,25 @@
   resolved "https://registry.npmjs.org/@leichtgewicht/ip-codec/-/ip-codec-2.0.4.tgz"
   integrity sha512-Hcv+nVC0kZnQ3tD9GVu5xSMR4VVYOteQIr/hwFPVEvPdlXqgGEuRjiheChHgdM+JyqdgNcmzZOX/tnl0JOiI7A==
 
+"@nativescript-community/ui-material-cardview@^7.2.44":
+  version "7.2.44"
+  resolved "https://registry.yarnpkg.com/@nativescript-community/ui-material-cardview/-/ui-material-cardview-7.2.44.tgz#27adecb00796dee717124a3689fac72966154705"
+  integrity sha512-S8+knCMAGqag3J6JkrWLxTjzU1GeX/3MGi2R8NvM0cfFVA7OSzXMioQUnRt+cun86OtjdSw4kKAHxgKmHLkZfQ==
+  dependencies:
+    "@nativescript-community/ui-material-core" "^7.2.44"
+
+"@nativescript-community/ui-material-core@^7.2.44":
+  version "7.2.44"
+  resolved "https://registry.yarnpkg.com/@nativescript-community/ui-material-core/-/ui-material-core-7.2.44.tgz#72721a7033094a15977a7a2482ad7b7330020101"
+  integrity sha512-HxD3Ut5UTJ+7iBruxSPDazDRWSmFsBPpPz/2MUZnO+3ZJNGGMHgeZzCFlhezyGV6mP4jVpkJAYxF6vdksppZXw==
+
+"@nativescript-community/ui-material-floatingactionbutton@^7.2.44":
+  version "7.2.44"
+  resolved "https://registry.yarnpkg.com/@nativescript-community/ui-material-floatingactionbutton/-/ui-material-floatingactionbutton-7.2.44.tgz#318960f6e42dd5306b06a5ad1f7944bafc78e6ca"
+  integrity sha512-gOlIXRHnRsJeLc4ghMED0rrwPhK9NB1iuq4h1VwDxs93Lyf7T6Y/EeBoPVwLJFQyMwVq70RA7jt0FHh4RMe88A==
+  dependencies:
+    "@nativescript-community/ui-material-core" "^7.2.44"
+
 "@nativescript/android@8.6.2":
   version "8.6.2"
   resolved "https://registry.npmjs.org/@nativescript/android/-/android-8.6.2.tgz"
