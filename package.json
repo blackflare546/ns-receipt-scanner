@@ -20,6 +20,9 @@
     "@nativescript/camera": "^5.1.1",
     "@nativescript/core": "~8.6.0",
     "@nativescript/theme": "~3.0.2",
+    "nativescript-ocr": "^1.0.0",
+    "patch-package": "^8.0.0",
+    "postinstall-postinstall": "^2.1.0",
     "rxjs": "~7.8.0",
     "tns-core-modules": "^6.5.27",
     "zone.js": "~0.13.0"

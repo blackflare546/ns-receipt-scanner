@@ -1,0 +1,23 @@
+diff --git a/node_modules/nativescript-ocr/platforms/android/include.gradle b/node_modules/nativescript-ocr/platforms/android/include.gradle
+index 65a0220..bca47d8 100644
+--- a/node_modules/nativescript-ocr/platforms/android/include.gradle
++++ b/node_modules/nativescript-ocr/platforms/android/include.gradle
+@@ -1,10 +1,6 @@
+ 
+ android {
+-    productFlavors {
+-        "ocr" {
+-            dimension "ocr"
+-        }
+-    }
++    
+ }
+ 
+ repositories {
+@@ -12,5 +8,5 @@ repositories {
+ }
+ 
+ dependencies {
+-    compile 'com.rmtheis:tess-two:5.4.1'
++    implementation 'com.rmtheis:tess-two:5.4.1'
+ }

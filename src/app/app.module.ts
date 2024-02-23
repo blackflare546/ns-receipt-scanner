@@ -7,6 +7,7 @@ import { NativeScriptMaterialButtonModule } from "@nativescript-community/ui-mat
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
+import { CameraService } from "./shared/services";
 
 @NgModule({
   bootstrap: [AppComponent],
@@ -16,6 +17,7 @@ import { AppComponent } from "./app.component";
     NativeScriptMaterialBottomNavigationModule,
     NativeScriptMaterialButtonModule,
   ],
+  providers: [CameraService],
   declarations: [AppComponent],
   schemas: [NO_ERRORS_SCHEMA],
 })
