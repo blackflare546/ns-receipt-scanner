@@ -1,10 +1,30 @@
 .parent-container {
   padding: 15;
+  flex-direction: column;
+  flex: 1;
 }
+
 .header {
   border-radius: 20;
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3), 0 5px 15px rgba(0, 0, 0, 0.25);
   margin-bottom: 10;
+  height: 20%;
+  &__label {
+    font-size: 20;
+    &--currency {
+      font-size: 20;
+      color: orange;
+    }
+    &--container {
+      padding: 25;
+    }
+  }
+  &-icon {
+    margin-top: 5;
+    font-family: "Material Icons", "MaterialIcons-Regular";
+    font-weight: 400;
+    font-size: 40;
+  }
 }
 
 .receipts-list {
@@ -14,20 +34,19 @@
 .receipt-container {
   height: 50%;
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3), 0 5px 15px rgba(0, 0, 0, 0.25);
-  border-radius: 20;
-  padding: 10;
-  margin-left: 4;
   width: 90%;
+  padding: 10;
+
   background-color: #7adba6;
-  align-self: center;
   &__data {
+    width: 95%;
     border-radius: 20;
     background-color: #afebc7;
   }
 }
 
 .date-container {
-  background-color: #eefbf3;
+  background-color: #ae9393;
   padding: 4;
   height: auto;
   border-radius: 30;
@@ -35,9 +54,28 @@
 
 .receipt-data {
   margin-bottom: 5;
-  width: 100%;
   &--label {
     color: rgb(5, 5, 5);
+    font-size: 20;
+    margin-left: 10;
+    font-weight: 100;
+    &__title {
+      font-size: 20;
+      margin-left: 10;
+      font-weight: 700;
+    }
+  }
+  &--image{
+    border-radius: 20;
+  }
+
+  &--container {
+    margin-top: 5;
+    border-width: 1;
+    border-radius: 20;
+    background-color: white;
+
+    padding: 10;
   }
 }
 
