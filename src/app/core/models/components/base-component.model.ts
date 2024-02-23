@@ -1,22 +1,17 @@
-import { HostListener, Injectable, Injector, NgZone, inject } from "@angular/core";
-import { RouterExtensions } from "@nativescript/angular";
-import { ActivatedRoute, Router } from "@angular/router";
-import { Application, Frame, Page } from "@nativescript/core";
-import { isAndroid, isIOS } from "tns-core-modules";
-import { confirm, alert } from "@nativescript/core/ui/dialogs";
-import { Subject, Subscription, timer } from "rxjs";
-import { distinctUntilChanged, switchMap, tap } from "rxjs/operators";
-import {
-  android as onAndroid,
-  AndroidApplication,
-} from "tns-core-modules/application";
+import { Injectable, Injector, inject } from "@angular/core";
+import { Application, Page } from "@nativescript/core";
+import { isAndroid } from "tns-core-modules";
+import { CameraService } from "~/app/shared/services";
 
 @Injectable()
 export abstract class BaseComponent {
   page: Page;
-  injector: Injector = inject(Injector)
 
-  constructor() {}
+  cameraService: CameraService;
+
+  constructor(protected injector: Injector) {
+    this.cameraService = injector.get(CameraService);
+  }
 
   hideStatusBar() {
     if (isAndroid) {

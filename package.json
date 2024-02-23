@@ -3,10 +3,6 @@
   "main": "src/main.ts",
   "version": "1.0.0",
   "private": true,
-  "scripts": {
-    "postinstall": "patch-package nativescript-ocr",
-    "apply-patch": "git apply --ignore-whitespace patches/nativescript-ocr+1.0.0.patch"
-  },
   "dependencies": {
     "@angular/animations": "~16.2.0",
     "@angular/common": "~16.2.0",
