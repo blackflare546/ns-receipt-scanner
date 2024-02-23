@@ -25,4 +25,8 @@ export class ReceiptComponent extends BaseComponent {
   ngOnInit() {
     this.hideStatusBar();
   }
+  addReceipt() {
+    console.log("test");
+    this.navigate("add-receipt");
+  }
 }
