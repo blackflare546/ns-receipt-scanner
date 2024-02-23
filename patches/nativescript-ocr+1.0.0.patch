@@ -1,0 +1,11 @@
+diff --git a/node_modules/nativescript-ocr/platforms/android/include.gradle b/node_modules/nativescript-ocr/platforms/android/include.gradle
+index 65a0220..7fc4561 100644
+--- a/node_modules/nativescript-ocr/platforms/android/include.gradle
++++ b/node_modules/nativescript-ocr/platforms/android/include.gradle
+@@ -12,5 +12,5 @@ repositories {
+ }
+ 
+ dependencies {
+-    compile 'com.rmtheis:tess-two:5.4.1'
++    implements 'com.rmtheis:tess-two:5.4.1'
+ }
