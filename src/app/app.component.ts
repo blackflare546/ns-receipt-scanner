@@ -10,8 +10,9 @@ import { BaseAppComponent } from "./core/models/components/app/base-app.componen
   templateUrl: "app.component.html",
 })
 export class AppComponent extends BaseAppComponent implements OnInit {
+  capturedImage: Image; // Add this property to store the captured image
+
   constructor() {
-    // Use the component constructor to inject providers.
     super();
   }
 
@@ -25,13 +26,21 @@ export class AppComponent extends BaseAppComponent implements OnInit {
         .takePicture()
         .then((imageAsset) => {
           console.log("Result is an image asset instance");
-          var image = new Image();
-          image.src = imageAsset;
+          this.capturedImage = new Image();
+          this.capturedImage.src = imageAsset;
         })
         .catch((err) => {
           console.log("Error -> " + err.message);
         });
     });
     console.log("CAMERA");
+  }
+
+  useCapturedImage() {
+    if (this.capturedImage) {
+      console.log(this.capturedImage.src);
+    } else {
+      console.log("No image captured yet");
+    }
   }
 }

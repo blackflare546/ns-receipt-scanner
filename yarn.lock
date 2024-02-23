@@ -1515,6 +1515,11 @@
   resolved "https://registry.yarnpkg.com/@leichtgewicht/ip-codec/-/ip-codec-2.0.4.tgz#b2ac626d6cb9c8718ab459166d4bb405b8ffa78b"
   integrity sha512-Hcv+nVC0kZnQ3tD9GVu5xSMR4VVYOteQIr/hwFPVEvPdlXqgGEuRjiheChHgdM+JyqdgNcmzZOX/tnl0JOiI7A==
 
+"@nativescript-community/text@^1.5.2":
+  version "1.5.46"
+  resolved "https://registry.yarnpkg.com/@nativescript-community/text/-/text-1.5.46.tgz#8e030c8d66e0a610c0278800f300f87efd6fc75d"
+  integrity sha512-veJO01kcvxZJ1kQ4iClgnvdKQ8JQLFjZKU5VReB6W2S3dqwVKrlHRN1SqlQCdMB1S5/S+WsWTJhJftos7xEMCQ==
+
 "@nativescript-community/ui-material-bottom-navigation@^7.2.44":
   version "7.2.44"
   resolved "https://registry.yarnpkg.com/@nativescript-community/ui-material-bottom-navigation/-/ui-material-bottom-navigation-7.2.44.tgz#06b03c8eb96469ef030d1e455268e161b0454b26"
@@ -1522,6 +1527,14 @@
   dependencies:
     "@nativescript-community/ui-material-core" "^7.2.44"
     "@nativescript-community/ui-material-core-tabs" "^7.2.44"
+
+"@nativescript-community/ui-material-button@^7.2.44":
+  version "7.2.44"
+  resolved "https://registry.yarnpkg.com/@nativescript-community/ui-material-button/-/ui-material-button-7.2.44.tgz#712734bef140f5c415b4a8d80ac2cf8a30194a01"
+  integrity sha512-x2EfILIUYpYB5fTtzEEqgSADDUtsoM8r0MPmBfns9Ul9E1AyL912Uh1t76r8aXcT9XVETWoByvbvDGrsfBERZw==
+  dependencies:
+    "@nativescript-community/text" "^1.5.2"
+    "@nativescript-community/ui-material-core" "^7.2.44"
 
 "@nativescript-community/ui-material-cardview@^7.2.44":
   version "7.2.44"
