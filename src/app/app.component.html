@@ -25,5 +25,6 @@
   </MDBottomNavigation>
 
   <!-- Floating action button -->
-  <MDFloatingActionButton rippleColor="gray" text="&#xe3b4;" class="small-fab m-icon"  top="680%" left="165%" ></MDFloatingActionButton>
+  <MDButton rippleColor="blue" text="text button" (tap)="useCapturedImage()"></MDButton>
+  <MDFloatingActionButton rippleColor="gray" text="&#xe3b4;" class="small-fab m-icon" (tap)="takePhoto()" top="680%" left="165%" ></MDFloatingActionButton>
 </AbsoluteLayout>
