@@ -1,9 +1,11 @@
+import { AddReceiptModule } from "./modules/receipt/add-receipt/add-receipt.module";
 import { NgModule } from "@angular/core";
 import { Routes } from "@angular/router";
 import {
   NativeScriptRouterModule,
   NSEmptyOutletComponent,
 } from "@nativescript/angular";
+import { AddReceiptComponent } from "./modules/receipt/add-receipt/add-receipt.component";
 
 const routes: Routes = [
   {
