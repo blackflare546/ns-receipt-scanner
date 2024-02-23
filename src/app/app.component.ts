@@ -21,6 +21,6 @@ export class AppComponent extends BaseAppComponent implements OnInit {
   }
 
   useCapturedImage() {
-    this._cameraService.getCapturedImage();
+    this._cameraService.getSavedImages();
   }
 }
