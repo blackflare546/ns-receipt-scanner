@@ -1,37 +1,87 @@
 <ActionBar flat="true" class="actionbar">
-  <Label text="user name" class="actionbar--title"></Label>
+  <Label text="Hello user" class="actionbar--title"></Label>
 </ActionBar>
 <!-- parent -->
-<GridLayout columns="auto, auto" rows="*, auto, auto" class="parent-container">
-  <!-- receipts and currency -->
-  <GridLayout rows="auto,auto" columns="auto, auto" class="header">
-    <Label col="0">You have spend </Label>
-    <Label col="1">&#8369;1,000,000 </Label>
-    <!-- date grid  -->
+<FlexboxLayout class="parent-container">
+  <GridLayout rows="auto,auto" columns="*, 50" class="header">
+    <GridLayout
+      row="0"
+      col="0"
+      rows="50,auto"
+      columns="auto, *"
+      class="header__label--container"
+    >
+      <Label col="0" class="header__label">Your total spend is </Label>
+      <Label row="1" col="0" class="header__label--currency"
+        >&#8369;1,000,000</Label
+      >
+    </GridLayout>
+
+    <GridLayout row="0" col="1">
+      <Label text="&#xe853;" class="header-icon"></Label>
+    </GridLayout>
   </GridLayout>
 
-  <GridLayout row="1">
-    <Label col="0" class="label-style">List of Receipts</Label></GridLayout
-  ><MDCardView rippleColor="red" width="100" height="100"></MDCardView>
+  <GridLayout
+    row="2"
+    rows="*,auto"
+    columns="auto,auto"
+    class="receipt-container"
+  >
+    <GridLayout row="0" col="1" backgroundColor="orange"></GridLayout>
 
-  <!-- MAO NING RED -->
-  <GridLayout row="2" rows="*" class="receipt-container">
     <GridLayout row="0" rows="*" class="receipt-container__data">
       <ScrollView>
         <StackLayout padding="12">
           <GridLayout
             row="0"
-            rows="*,*"
+            rows="auto,auto"
             columns="*,auto,*"
             *ngFor="let item of receiptData; let i = index"
             class="receipt-data"
           >
-            <GridLayout col="0"></GridLayout>
-            <Label col="1" class="date-container">
-              {{ item.date | formatDate }} | &#8369;0
-            </Label>
+            <GridLayout row="0" col="1">
+              <Label col="1" class="date-container">
+                {{ item.date | formatDate }} | &#8369;0
+              </Label>
+            </GridLayout>
 
-            <Label class="receipt-data--label" row="1">{{ item.text }}</Label>
+            <GridLayout
+              class="receipt-data--container"
+              colSpan="3"
+              row="1"
+              columns="50,*,*"
+              rows="auto,auto,auto"
+            >
+              <Image
+                rowSpan="2"
+                src="~/assets/app-images/benz.png"
+                height="60"
+                class="receipt-data--image"
+              ></Image>
+
+              <Label
+                class="receipt-data--label__title"
+                row="0"
+                col="1"
+                text="{{ item.title }}"
+              ></Label>
+
+              <Label
+                text="&#8369;{{ item.price }}"
+                textWrap="true"
+                class="receipt-data--label__title"
+                row="0"
+                col="2"
+              ></Label>
+
+              <Label
+                class="receipt-data--label"
+                row="1"
+                col="1"
+                text="{{ item.category }}"
+              ></Label>
+            </GridLayout>
           </GridLayout>
 
           <!-- Using ngFor to iterate over receiptData array -->
@@ -39,4 +89,4 @@
       </ScrollView>
     </GridLayout>
   </GridLayout>
-</GridLayout>
+</FlexboxLayout>
