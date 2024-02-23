@@ -1,0 +1,70 @@
+ .title_label {
+  margin-top: 40vh;
+  font-size: 32px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.stacks-container {
+  padding: 32px;
+  flex-wrap: wrap;
+  margin-top: 30vh;
+
+  &_box {
+    margin-top: 45px;
+    background-color: aquamarine;
+    border-radius: 20px;
+    height: 200px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
+  }
+}
+
+.stacks-container_titles {
+  margin-left: 40px;
+  margin-top: 60px;
+  margin-bottom: 30px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.m-icon {
+  font-family: "Material Icons", "MaterialIcons-Regular";
+  font-weight: 400;
+}
+
+.m-icon-font-size {
+  font-size: 30;
+}
+
+.m-icon-outline {
+  font-family: "Material Icons", "MaterialIconsOutlined-Regular";
+  font-weight: 400;
+}
+
+.selected {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+}
+
+.button {
+  margin-top: 5%;
+  height: 10%;
+  width: 39%;
+  border-radius: 10px;
+}
+.Button_title {
+  font-size: 16px;
+  font-weight: 500;
+  background-color: rgb(139, 196, 245);
+  margin-top: 100px;
+  padding: 40px;
+  border-radius: 20px;
+}
+
+.subtitle {
+  font-size: 16;
+  margin-left: 35px;
+  margin-top: 20px;
+  font-weight: 200;
+}
