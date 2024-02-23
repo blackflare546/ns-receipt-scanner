@@ -20,7 +20,11 @@ export class AppComponent extends BaseAppComponent implements OnInit {
     this._cameraService.capturePhoto();
   }
 
-  useCapturedImage() {
-    this._cameraService.getSavedImages();
+  // TO BE DELETED, THIS ONLY TO CHECK IF FUNCTION WORKS
+  image = this._cameraService.getSavedImages();
+  useGetImage() {
+    this.image.forEach((savedImage) => {
+      console.log(savedImage);
+    });
   }
 }

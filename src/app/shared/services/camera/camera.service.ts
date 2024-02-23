@@ -9,6 +9,8 @@ import {
 import { requestPermissions } from "@nativescript/camera";
 import * as camera from "@nativescript/camera";
 
+import { SavedImage } from "../../interfaces";
+
 @Injectable({
   providedIn: "root",
 })
@@ -31,6 +33,17 @@ export class CameraService {
       camera
         .takePicture(options)
         .then((imageAsset) => {
+          console.log(
+            "Size: " +
+              imageAsset.options.width +
+              "x" +
+              imageAsset.options.height
+          );
+          console.log("keepAspectRatio: " + imageAsset.options.keepAspectRatio);
+          console.log(
+            "Photo saved in Photos/Gallery for Android or in Camera Roll for iOS"
+          );
+
           ImageSource.fromAsset(imageAsset).then((imageSource: ImageSource) => {
             this.saveImage(imageSource);
           });
@@ -50,6 +63,7 @@ export class CameraService {
     const fileName: string = "scan_" + dateTime + ".jpg";
     const filePath: string = path.join(folderPath, fileName);
 
+    // Check if the folder exists, if not, create it
     const folder = knownFolders.documents().getFolder("Scanned-Receipts");
 
     const saved: boolean = imageSource.saveToFile(filePath, "jpg");
@@ -69,7 +83,7 @@ export class CameraService {
     dateTime: string
   ): void {
     const jsonData = this.retrieveJSON();
-    const entry = { filePath, fileName, dateTime };
+    const entry: SavedImage = { filePath, fileName, dateTime };
     jsonData.push(entry);
 
     const jsonString = JSON.stringify(jsonData);
@@ -92,7 +106,7 @@ export class CameraService {
       });
   }
 
-  private retrieveJSON(): any[] {
+  private retrieveJSON(): SavedImage[] {
     const jsonFilePath = path.join(
       knownFolders.documents().path,
       "Scanned-Receipts",
@@ -107,7 +121,7 @@ export class CameraService {
     }
 
     try {
-      const jsonData = JSON.parse(file.readTextSync());
+      const jsonData: SavedImage[] = JSON.parse(file.readTextSync());
       return jsonData;
     } catch (error) {
       console.log("Error parsing JSON: " + error);
@@ -115,8 +129,7 @@ export class CameraService {
     }
   }
 
-  getSavedImages(): any[] {
-    console.log(this.retrieveJSON());
+  getSavedImages(): SavedImage[] {
     return this.retrieveJSON();
   }
 }
