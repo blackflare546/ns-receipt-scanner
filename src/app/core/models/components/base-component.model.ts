@@ -21,7 +21,6 @@ export abstract class BaseComponent {
   cameraService: CameraService;
   routerExtension: RouterExtensions;
   activeRoute: ActivatedRoute;
-
   navExtras: NavExtras;
 
   constructor(protected injector: Injector) {

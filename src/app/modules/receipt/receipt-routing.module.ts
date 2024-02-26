@@ -11,7 +11,7 @@ const routes: Routes = [
     component: ReceiptComponent,
   },
   {
-    path: "receipt/addReceipt",
+    path: "receipt/add-receipt",
     component: AddReceiptComponent,
   },
 ];

@@ -1,29 +1,36 @@
 <AbsoluteLayout>
-  <MDBottomNavigation  selectedIndex="0" width="100%" height="100%" top="0">
-      <!-- The bottom tab UI is created via TabStrip (the container) and TabStripItem (for each tab)-->
-      <MDTabStrip >
-          <MDTabStripItem >
-            <Label text="&#xe88a;" class="m-icon m-icon-font-size"  ></Label>
-          </MDTabStripItem>
-          <MDTabStripItem>
-              <Label text="&#xe873;" class="m-icon m-icon-font-size "></Label>
-          </MDTabStripItem>
-      </MDTabStrip>
+  <MDBottomNavigation selectedIndex="0" width="100%" height="100%" top="0">
+    <!-- The bottom tab UI is created via TabStrip (the container) and TabStripItem (for each tab)-->
+    <MDTabStrip>
+      <MDTabStripItem>
+        <Label text="&#xe88a;" class="m-icon m-icon-font-size"></Label>
+      </MDTabStripItem>
+      <MDTabStripItem>
+        <Label text="&#xe873;" class="m-icon m-icon-font-size"></Label>
+      </MDTabStripItem>
+    </MDTabStrip>
 
-      <!-- The number of TabContentItem components should correspond to the number of TabStripItem components -->
-      <MDTabContentItem > 
-          <GridLayout>
-              <page-router-outlet name="homeTab"></page-router-outlet>
-          </GridLayout>
-      </MDTabContentItem>
+    <!-- The number of TabContentItem components should correspond to the number of TabStripItem components -->
+    <MDTabContentItem>
+      <GridLayout>
+        <page-router-outlet name="homeTab"></page-router-outlet>
+      </GridLayout>
+    </MDTabContentItem>
 
-      <MDTabContentItem>
-          <GridLayout>
-              <page-router-outlet name="reportTab"></page-router-outlet>
-          </GridLayout>
-      </MDTabContentItem>
+    <MDTabContentItem>
+      <GridLayout>
+        <page-router-outlet name="reportTab"></page-router-outlet>
+      </GridLayout>
+    </MDTabContentItem>
   </MDBottomNavigation>
 
   <!-- Floating action button -->
-  <MDFloatingActionButton rippleColor="gray" text="&#xe3b4;" class="small-fab m-icon" (tap)="takePhoto()" top="680%" left="165%" ></MDFloatingActionButton>
+  <MDFloatingActionButton
+    rippleColor="gray"
+    text="&#xe3b4;"
+    class="small-fab m-icon"
+    (tap)="takePhoto()"
+    top="680%"
+    left="165%"
+  ></MDFloatingActionButton>
 </AbsoluteLayout>
