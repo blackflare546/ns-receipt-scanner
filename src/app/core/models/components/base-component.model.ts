@@ -40,16 +40,10 @@ export abstract class BaseComponent {
   }
   navigate(path: string, options: NavigationExtras = {}): void {
     this.lastPath = path;
-    this.hideKeyboard();
     this.routerExtension.navigate([path], {
       ...this.navExtras,
       ...{ relativeTo: this.activeRoute },
       ...options,
     });
-  }
-  hideKeyboard(): void {
-    if (isIOS) {
-      Frame.topmost().nativeView.endEditing(true);
-    }
   }
 }

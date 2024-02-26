@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Injector } from "@angular/core";
 import { BaseComponent } from "~/app/core/models/components/base-component.model";
 
 @Component({
@@ -26,7 +26,6 @@ export class ReceiptComponent extends BaseComponent {
     this.hideStatusBar();
   }
   addReceipt() {
-    console.log("test");
-    this.navigate("add-receipt");
+    this.navigate("addReceipt");
   }
 }
