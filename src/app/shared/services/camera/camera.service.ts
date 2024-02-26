@@ -2,6 +2,7 @@ import { Injectable, Injector } from "@angular/core";
 import { ImageSource } from "@nativescript/core";
 import { requestPermissions } from "@nativescript/camera";
 import * as camera from "@nativescript/camera";
+import { Router } from "@angular/router";
 import { RouterExtensions } from "@nativescript/angular";
 
 @Injectable({
@@ -10,7 +11,10 @@ import { RouterExtensions } from "@nativescript/angular";
 export class CameraService {
   capturedImage: ImageSource;
 
-  constructor(private _routerExtensions: RouterExtensions) {}
+  constructor(
+    private router: Router,
+    private routerExtensions: RouterExtensions
+  ) {}
 
   capturePhoto(): Promise<Boolean> {
     const options = {
@@ -34,9 +38,5 @@ export class CameraService {
           });
       });
     });
-  }
-
-  navigateToReceipts() {
-    this._routerExtensions.navigate(["/report"]);
   }
 }
