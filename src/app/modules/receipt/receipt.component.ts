@@ -26,6 +26,6 @@ export class ReceiptComponent extends BaseComponent {
     this.hideStatusBar();
   }
   addReceipt() {
-    this.navigate("addReceipt");
+    this.navigate("add-receipt");
   }
 }

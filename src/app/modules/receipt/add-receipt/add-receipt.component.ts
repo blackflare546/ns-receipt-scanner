@@ -7,7 +7,9 @@ import { BaseComponent } from "~/app/core/models/components/base-component.model
   styleUrls: ["./add-receipt.component.scss"],
 })
 export class AddReceiptComponent extends BaseComponent {
+  
   back() {
+    console.log("Test");
     this.navigate("/");
   }
 }

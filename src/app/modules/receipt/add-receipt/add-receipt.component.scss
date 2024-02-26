@@ -1,0 +1,80 @@
+.parent-container {
+  padding: 20;
+  flex-direction: column;
+  flex: 1;
+  background-color: #f0f0f0;
+}
+.icon {
+  font-family: "Material Icons", "MaterialIcons-Regular";
+  font-size: 25;
+}
+
+.header {
+  padding: 0 10 0 30;
+  background-color: #ffffff;
+  border-radius: 10;
+  margin-bottom: 10;
+  &__label {
+    font-size: 14;
+  }
+}
+
+.input-field {
+  border-radius: 5;
+  padding: 10;
+  margin-left: 10;
+  width: 100%;
+  text-align: right;
+}
+
+.field-container {
+  padding: 0 10 0 30;
+  background-color: #ffffff;
+  border-radius: 10;
+  margin-bottom: 10;
+  &__label {
+    font-size: 16;
+    color: rgb(0, 0, 0);
+  }
+}
+.note-container {
+  background-color: #ffffff;
+  padding: 5 10 5 30;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  border-top-left-radius: 10;
+  border-top-right-radius: 10;
+  border-bottom-width: 0.5;
+  &--data {
+    background-color: #ffffff;
+
+    font-size: 15;
+    padding: 20;
+  }
+}
+
+.date-container {
+  width: 100%;
+  height: 50;
+  background-color: white;
+  border-radius: 10;
+  padding-left: 20;
+  margin-bottom: 10;
+}
+
+.botton-container {
+  margin-top: 5;
+  &--save {
+    background-color: #7adba6;
+    border-radius: 10;
+    font-size: 16;
+    color: white;
+  }
+  &--cancel {
+    background-color: #7adba6;
+    color: white;
+    font-size: 16;
+    border-radius: 10;
+  }
+}
