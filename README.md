@@ -14,29 +14,6 @@ To install the dependencies for the NativeScript project, please ensure you have
    yarn
    ```
 
-4. After installing yarn, run the command
-
-   ```
-   git apply --ignore-whitespace patches/nativescript-ocr+1.0.0.patch
-   ```
-
-## Package Patching
-
-The `nativescript-ocr` module contains a deprecated package. To update the package, follow the steps below:
-
-1. Open `node_modules/nativescript-ocr/platforms/android/include.gradle`.
-2. Change all instances of `compile` to **`implementation`**.
-
-After making these changes, run the following command:
-
-```
-patch-package nativescript-ocr
-```
-
-It will create a folder and file "patches/nativescript-ocr+1.0.0.patch"
-
-`Only do the patch, if you receive a error on nativescript-ocr package`
-
 ## Running the App
 
 To run the NativeScript app, follow the steps below:
