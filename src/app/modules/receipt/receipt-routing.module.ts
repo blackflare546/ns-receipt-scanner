@@ -3,15 +3,16 @@ import { Routes } from "@angular/router";
 import { NativeScriptRouterModule } from "@nativescript/angular";
 
 import { ReceiptComponent } from "./receipt.component";
+import { AddReceiptComponent } from "./add-receipt/add-receipt.component";
 
 const routes: Routes = [
   {
-    path: "default",
+    path: "receipt",
     component: ReceiptComponent,
   },
   {
-    path: "add-receipt",
-    loadChildren: () => import("./add-receipt").then((m) => m.AddReceiptModule),
+    path: "receipt/addReceipt",
+    component: AddReceiptComponent,
   },
 ];
 

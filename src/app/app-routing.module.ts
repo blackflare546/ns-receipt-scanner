@@ -5,13 +5,12 @@ import {
   NativeScriptRouterModule,
   NSEmptyOutletComponent,
 } from "@nativescript/angular";
-import { AddReceiptComponent } from "./modules/receipt/add-receipt/add-receipt.component";
 
 const routes: Routes = [
   {
     path: "",
     redirectTo:
-      "/(homeTab:home/default//cameraTab:camera/default//reportTab:report/default)",
+      "/(homeTab:home/receipt//cameraTab:camera/default//reportTab:report/default)",
     pathMatch: "full",
   },
   {
