@@ -1,6 +1,6 @@
 import { BaseComponent } from "../base-component.model";
 
-export declare class BaseAppComponent {
+export declare class BaseAppComponent extends BaseComponent {
   constructor(...args: Array<any>) {
     //
   }

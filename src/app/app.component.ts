@@ -16,15 +16,14 @@ export class AppComponent extends BaseAppComponent implements OnInit {
     // Init your component properties here.
   }
 
-  takePhoto() {
-    this._cameraService.capturePhoto();
-  }
+  async takePhoto() {
+    try {
+      const image = await this._cameraService.capturePhoto();
 
-  // TO BE DELETED, THIS ONLY TO CHECK IF FUNCTION WORKS
-  image = this._cameraService.getSavedImages();
-  useGetImage() {
-    this.image.forEach((savedImage) => {
-      console.log(savedImage);
-    });
+      console.log("Photo captured:", image);
+      this._cameraService.navigateToReceipts();
+    } catch (error) {
+      console.error("Error capturing photo:", error);
+    }
   }
 }
