@@ -4538,6 +4538,11 @@
   "resolved" "https://registry.npmjs.org/nanoid/-/nanoid-3.3.7.tgz"
   "version" "3.3.7"
 
+"nativescript-drop-down@^6.0.2":
+  "integrity" "sha512-rDANL6yhwL2bqWyxEopyBwpybw2tnVms4lUJOB3cbJnC9pa4IuNkyEM2f5q7ZKMP8G5FiMXazLEiuyloHAutGQ=="
+  "resolved" "https://registry.npmjs.org/nativescript-drop-down/-/nativescript-drop-down-6.0.2.tgz"
+  "version" "6.0.2"
+
 "nativescript-hook@0.2.5":
   "integrity" "sha512-ciGJtNbtMB2lGv8jAkUripkRjd3g8atX9VYPSt6e8PI6YPiOKeoma3xjcXoW66pFMYpHnfrbp6Mq9U/QtiQrVg=="
   "resolved" "https://registry.npmjs.org/nativescript-hook/-/nativescript-hook-0.2.5.tgz"
