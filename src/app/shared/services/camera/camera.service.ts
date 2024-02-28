@@ -29,7 +29,8 @@ export class CameraService {
         camera
           .takePicture(options)
           .then((imageAsset) => {
-            console.log("Image captured");
+            console.log("Image captured: ");
+            console.log(imageAsset);
             resolve(true);
           })
           .catch((err) => {

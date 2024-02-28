@@ -4676,10 +4676,22 @@ nanoid@^3.3.6, nanoid@^3.3.7:
   resolved "https://registry.npmjs.org/nanoid/-/nanoid-3.3.7.tgz"
   integrity sha512-eSRppjcPIatRIMC1U6UngP8XFcz8MQWGQdt1MTBQ7NaAmvXDfvNxbvWV3x2y6CdEUciCSsDHDQZbhYaB8QEo2g==
 
+<<<<<<< HEAD
+"nativescript-drop-down@^6.0.2":
+  "integrity" "sha512-rDANL6yhwL2bqWyxEopyBwpybw2tnVms4lUJOB3cbJnC9pa4IuNkyEM2f5q7ZKMP8G5FiMXazLEiuyloHAutGQ=="
+  "resolved" "https://registry.npmjs.org/nativescript-drop-down/-/nativescript-drop-down-6.0.2.tgz"
+  "version" "6.0.2"
+
+"nativescript-hook@0.2.5":
+  "integrity" "sha512-ciGJtNbtMB2lGv8jAkUripkRjd3g8atX9VYPSt6e8PI6YPiOKeoma3xjcXoW66pFMYpHnfrbp6Mq9U/QtiQrVg=="
+  "resolved" "https://registry.npmjs.org/nativescript-hook/-/nativescript-hook-0.2.5.tgz"
+  "version" "0.2.5"
+=======
 nativescript-hook@0.2.5:
   version "0.2.5"
   resolved "https://registry.npmjs.org/nativescript-hook/-/nativescript-hook-0.2.5.tgz"
   integrity sha512-ciGJtNbtMB2lGv8jAkUripkRjd3g8atX9VYPSt6e8PI6YPiOKeoma3xjcXoW66pFMYpHnfrbp6Mq9U/QtiQrVg==
+>>>>>>> c97bdfbed56fe4a984ce53d0e2184dd67fe57eb0
   dependencies:
     glob "^6.0.1"
     mkdirp "^0.5.1"
