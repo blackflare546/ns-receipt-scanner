@@ -1,6 +1,6 @@
 import { AddReceiptModule } from "./modules/receipt/add-receipt/add-receipt.module";
 import { NgModule } from "@angular/core";
-import { PreloadAllModules, Routes } from "@angular/router";
+import { Routes } from "@angular/router";
 import {
   NativeScriptRouterModule,
   NSEmptyOutletComponent,
@@ -17,29 +17,27 @@ const routes: Routes = [
     path: "home",
     component: NSEmptyOutletComponent,
     loadChildren: () =>
-      import("./modules/receipt").then((m) => m.ReceiptModule),
+      import("~/app/modules/receipt").then((m) => m.ReceiptModule),
     outlet: "homeTab",
   },
   {
     path: "camera",
     component: NSEmptyOutletComponent,
-    loadChildren: () => import("./modules/camera").then((m) => m.CameraModule),
+    loadChildren: () =>
+      import("~/app/modules/camera").then((m) => m.CameraModule),
     outlet: "cameraTab",
   },
   {
     path: "report",
     component: NSEmptyOutletComponent,
-    loadChildren: () => import("./modules/report").then((m) => m.ReportModule),
+    loadChildren: () =>
+      import("~/app/modules/report").then((m) => m.ReportModule),
     outlet: "reportTab",
   },
 ];
 
 @NgModule({
-  imports: [
-    NativeScriptRouterModule.forRoot(routes, {
-      preloadingStrategy: PreloadAllModules,
-    }),
-  ],
+  imports: [NativeScriptRouterModule.forRoot(routes)],
   exports: [NativeScriptRouterModule],
 })
 export class AppRoutingModule {}

@@ -10,7 +10,7 @@
   </ActionItem>
 </ActionBar>
 
-<StackLayout class="parent-container" [formGroup]="form">
+<StackLayout class="parent-container">
   <GridLayout rows="auto,auto" columns="auto, 80,*" class="header">
     <Label row="0" col="0" text="&#xf1b6;" class="icon"></Label>
     <Label row="0" col="1" text="Name" class="header__label"></Label>
@@ -20,7 +20,6 @@
       textWrap="true"
       hint="Name"
       class="input-field"
-      formControlName="title"
     ></TextField>
   </GridLayout>
   <GridLayout rows="auto,auto" columns="auto,80, *" class="field-container">
@@ -32,7 +31,7 @@
       col="2"
       textWrap="true"
       hint="Price"
-      formControlName="price"
+      formControlName="email"
       class="input-field"
     ></TextField>
   </GridLayout>
@@ -41,24 +40,14 @@
       hint="Select Date"
       buttonOkTextColor="red"
       pickerTitle="Confirm predefined date selection"
-      formControlName="date"
     ></DatePickerField>
   </GridLayout>
-  <GridLayout class="date-container">
-    <DropDown
-      #dd
-      class="text"
-      [hint]="hint"
-      itemsTextAlignment="center"
-      [items]="items"
-      [formControl]="form.get('category')"
-    ></DropDown>
-  </GridLayout>
+
   <GridLayout rows="auto,auto" columns="auto,80, *" class="note-container">
     <Label row="0" col="0" text="&#xe873;" class="icon"></Label>
     <Label row="0" col="1" text="Notes" class="field-container__label"></Label>
   </GridLayout>
-  <GridLayout rows="auto" height="28%" class="note-container--data">
+  <GridLayout rows="auto" height="40%" class="note-container--data">
     <TextField
       row="0"
       textWrap="true"

@@ -45,5 +45,4 @@ export abstract class BaseComponent {
       ...options,
     });
   }
-  
 }
