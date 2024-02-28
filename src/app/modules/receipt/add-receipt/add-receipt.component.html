@@ -52,7 +52,6 @@
       itemsTextAlignment="center"
       [items]="items"
       [formControl]="form.get('category')"
-      (selectedIndexChanged)="onchange($event)"
     ></DropDown>
   </GridLayout>
   <GridLayout rows="auto,auto" columns="auto,80, *" class="note-container">
@@ -70,17 +69,12 @@
     ></TextField>
   </GridLayout>
   <GridLayout rows="auto,auto" class="botton-container">
-    <Button
-      row="0"
-      text="Save"
-      class="botton-container--save"
-      (tap)="onSave()"
-    ></Button>
+    <Button row="0" text="Save" class="botton-container--save"></Button>
     <Button
       row="1"
       text="Cancel"
-      class="botton-container--cancel"
       (tap)="back()"
+      class="botton-container--cancel"
     ></Button>
   </GridLayout>
 </StackLayout>

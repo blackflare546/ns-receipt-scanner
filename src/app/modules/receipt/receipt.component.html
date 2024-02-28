@@ -1,5 +1,5 @@
 <ActionBar flat="true" class="actionbar">
-  <Label text="Hello user" class="actionbar--title"></Label>
+  <Label text="Dashboard" class="actionbar--title"></Label>
 </ActionBar>
 <!-- parent -->
 <FlexboxLayout class="parent-container">
@@ -21,8 +21,8 @@
       <Label text="&#xe853;" class="header-icon"></Label>
     </GridLayout>
   </GridLayout>
+  <!-- <Button (tap)="addReceipt()">Add Receipt</Button> -->
 
-  <Button (tap)="addReceipt()">Add Receipt</Button>
   <Label text="Receipt Lists" class="receipt-container--title"></Label>
   <GridLayout
     row="2"
@@ -41,6 +41,7 @@
             columns="*,auto,*"
             *ngFor="let item of receiptData; let i = index"
             class="receipt-data"
+            (tap)="addReceipt()"
           >
             <GridLayout row="0" col="1">
               <Label col="1" class="date-container">
@@ -57,11 +58,10 @@
             >
               <Image
                 rowSpan="2"
-                [src]="item.imageSrc"
+                src="~/assets/app-images/benz.png"
                 height="60"
                 class="receipt-data--image"
               ></Image>
-
               <Label
                 class="receipt-data--label__title"
                 row="0"
