@@ -32,10 +32,10 @@ export class ReceiptComponent extends BaseComponent {
   }
 
   private calculateTotalAmount() {
-    const test = (this.totalAmount = this.receiptData.reduce(
-      (sum, item) => sum + item.price,
-      0
-    ));
+    this.totalAmount = this.receiptData.reduce((sum, item) => {
+      console.log("Item Price:", item.price);
+      return sum + Number(item.price);
+    }, 0);
+    console.log("Total Amount:", this.totalAmount);
   }
-  
 }

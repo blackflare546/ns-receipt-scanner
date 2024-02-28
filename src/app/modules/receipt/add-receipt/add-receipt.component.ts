@@ -33,26 +33,13 @@ export class AddReceiptComponent extends BaseComponent implements OnInit {
     });
 
     this.items = new ValueList<string>([
-      { value: "test1", display: "Test 1" },
-      { value: "test2", display: "Test 2" },
-      { value: "test3", display: "Test 3" },
+      { value: "Food/Restaurant", display: "Restaurant" },
+      { value: "Electric", display: "Electric Bill" },
+      { value: "Internet", display: "Internet Bill" },
     ]);
   }
 
-  onchange(args: SelectedIndexChangedEventData) {
-    console.log(
-      `Drop Down selected index changed from ${args.oldIndex} to ${args.newIndex}`
-    );
-
-    const selectedText = this.items.getDisplay(args.newIndex);
-    const selectedValue = this.items.getValue(args.newIndex);
-
-    console.log(`Selected text: ${selectedText}`);
-    console.log(`Selected value: ${selectedValue}`);
-  }
-
   back() {
-    console.log("Test");
     this.navigate("/");
   }
 
@@ -71,8 +58,6 @@ export class AddReceiptComponent extends BaseComponent implements OnInit {
 
       this.receiptService.addReceipt(receipt);
       this.navigate("/");
-      console.log("Form data saved:", receipt);
-
       this.form.reset();
     } else {
       console.log("Form data not saved. Validation errors:", this.form.value);
