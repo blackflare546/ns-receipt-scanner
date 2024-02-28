@@ -47,12 +47,7 @@
   border: 1px solid #ccc;
 }
 
-.button {
-  margin-top: 5%;
-  height: 10%;
-  width: 39%;
-  border-radius: 10px;
-}
+
 .Button_title {
   font-size: 16px;
   font-weight: 500;
@@ -67,4 +62,11 @@
   margin-left: 35px;
   margin-top: 20px;
   font-weight: 200;
+}
+
+
+.disabled {
+    opacity: 0.5; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0); 
+    pointer-events: none; 
 }
