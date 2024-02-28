@@ -59,6 +59,11 @@
   </GridLayout>
   <GridLayout rows="auto,auto" class="botton-container">
     <Button row="0" text="Save" class="botton-container--save"></Button>
-    <Button row="1" text="Cancel" class="botton-container--cancel"></Button>
+    <Button
+      row="1"
+      text="Cancel"
+      (tap)="back()"
+      class="botton-container--cancel"
+    ></Button>
   </GridLayout>
 </StackLayout>
