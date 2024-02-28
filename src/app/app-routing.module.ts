@@ -1,6 +1,6 @@
 import { AddReceiptModule } from "./modules/receipt/add-receipt/add-receipt.module";
 import { NgModule } from "@angular/core";
-import { Routes } from "@angular/router";
+import { PreloadAllModules, Routes } from "@angular/router";
 import {
   NativeScriptRouterModule,
   NSEmptyOutletComponent,
@@ -37,7 +37,11 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [NativeScriptRouterModule.forRoot(routes)],
+  imports: [
+    NativeScriptRouterModule.forRoot(routes, {
+      preloadingStrategy: PreloadAllModules,
+    }),
+  ],
   exports: [NativeScriptRouterModule],
 })
 export class AppRoutingModule {}

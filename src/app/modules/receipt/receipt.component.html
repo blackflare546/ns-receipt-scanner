@@ -13,7 +13,7 @@
     >
       <Label col="0" class="header__label">Your total spend is </Label>
       <Label row="1" col="0" class="header__label--currency"
-        >&#8369;1,000,000</Label
+        >&#8369;{{ totalAmount | number }}</Label
       >
     </GridLayout>
 
@@ -44,7 +44,7 @@
           >
             <GridLayout row="0" col="1">
               <Label col="1" class="date-container">
-                {{ item.date | formatDate }} | &#8369;0
+                {{ item.date | formatDate }} | &#8369;{{ item.price }}
               </Label>
             </GridLayout>
 
@@ -57,7 +57,7 @@
             >
               <Image
                 rowSpan="2"
-                src="~/assets/app-images/benz.png"
+                [src]="item.imageSrc"
                 height="60"
                 class="receipt-data--image"
               ></Image>

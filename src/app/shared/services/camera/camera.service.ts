@@ -36,7 +36,5 @@ export class CameraService {
     });
   }
 
-  navigateToReceipts() {
-    this._routerExtensions.navigate(["/report"]);
-  }
+ 
 }
