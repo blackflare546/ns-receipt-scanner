@@ -21,7 +21,6 @@
     "@nativescript/core": "~8.6.0",
     "@nativescript/datetimepicker": "^2.1.13",
     "@nativescript/theme": "~3.0.2",
-    "nativescript-drop-down": "^6.0.2",
     "nativescript-modal-datetimepicker": "^2.1.5",
     "patch-package": "^8.0.0",
     "postinstall-postinstall": "^2.1.0",

@@ -1,29 +1,27 @@
-import { Component, Injector, OnInit } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 
+import { BaseAppComponent } from "./core/models/components/app/base-app.component";
 import { CameraService } from "./shared/services";
-
-import { BaseComponent } from "./core/models/components/base-component.model";
 
 @Component({
   selector: "ns-app",
   templateUrl: "app.component.html",
 })
-export class AppComponent extends BaseComponent implements OnInit {
-  constructor(
-    private _cameraService: CameraService,
-    protected injector: Injector
-  ) {
-    super(injector);
+export class AppComponent extends BaseAppComponent implements OnInit {
+  constructor(private _cameraService: CameraService) {
+    super();
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    // Init your component properties here.
+  }
 
   async takePhoto() {
     try {
-      const image = await this._cameraService
-        .capturePhoto()
-        .then(() => this.navigate("/report"));
+      const image = await this._cameraService.capturePhoto();
+
       console.log("Photo captured:", image);
+      this._cameraService.navigateToReceipts();
     } catch (error) {
       console.error("Error capturing photo:", error);
     }
