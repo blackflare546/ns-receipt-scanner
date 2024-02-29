@@ -8,12 +8,12 @@
   border-radius: 20;
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3), 0 5px 15px rgba(0, 0, 0, 0.25);
   margin-bottom: 10;
-  height: 20%;
+  height: 29%;
   &__label {
     font-size: 20;
     &--currency {
       font-size: 20;
-      color: orange;
+      color: rgb(0, 255, 8);
     }
     &--container {
       padding: 25;
@@ -41,11 +41,12 @@
   &__data {
     width: 95%;
     border-radius: 20;
-    background-color: #afebc7;
   }
   &--title {
-    font-size: 14;
+    font-size: 16;
     margin-left: 10;
+    align-self: center;
+    font-weight: 800;
   }
 }
 
