@@ -11,10 +11,11 @@ import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 })
 export class AddReceiptComponent extends BaseComponent {
   public selectedIndex = 1;
+  showSaveButton: boolean = true;
   form: FormGroup;
   items: ValueList<string>;
   public hint = "Select Category";
-
+  buttonText: string = "Cancel";
   back() {
     this.navigate("/");
   }
@@ -25,12 +26,33 @@ export class AddReceiptComponent extends BaseComponent {
     private receiptService: ReceiptService
   ) {
     super(injector);
+
+    const selectedReceipt = this.receiptService.getSelectedReceipt();
+    if (selectedReceipt) {
+      this.hint = selectedReceipt.category
+        ? selectedReceipt.category
+        : "Select Category";
+      this.showSaveButton = true;
+      this.buttonText = "Back";
+    } else {
+      this.showSaveButton = false;
+    }
+
     this.form = this.fb.group({
-      title: ["", Validators.required],
-      price: ["", Validators.required],
-      date: [new Date(), Validators.required],
-      notes: [""],
-      category: [""],
+      title: [
+        selectedReceipt ? selectedReceipt.title : "",
+        Validators.required,
+      ],
+      price: [
+        selectedReceipt ? selectedReceipt.price : "",
+        Validators.required,
+      ],
+      date: [
+        selectedReceipt ? selectedReceipt.date : new Date(),
+        Validators.required,
+      ],
+      notes: [selectedReceipt ? selectedReceipt.notes : ""],
+      category: [selectedReceipt ? selectedReceipt.category : ""],
     });
 
     this.items = new ValueList<string>([
@@ -40,22 +62,34 @@ export class AddReceiptComponent extends BaseComponent {
     ]);
   }
 
+  onBack() {
+    this.navigate("/");
+    console.log("BACK");
+  }
+
   onSave() {
     if (this.form.valid) {
       const selectedCategoryText = this.items.getDisplay(
         this.form.get("category").value
       );
+      console.log("SAVE");
 
       const receipt = {
         title: this.form.get("title").value,
         category: selectedCategoryText,
         date: this.form.get("date").value,
         price: this.form.get("price").value,
+        notes: this.form.get("notes").value,
       };
 
       this.receiptService.addReceipt(receipt);
+      this.showSaveButton = true;
+      // Clear the selected receipt after using it
+      this.receiptService.setSelectedReceipt(null);
+
       this.navigate("/");
       this.form.reset();
+      this.hint = "Select Category";
     } else {
       console.log("Form data not saved. Validation errors:", this.form.value);
     }

@@ -30,14 +30,18 @@ export class ReceiptComponent extends BaseComponent {
   }
 
   addReceipt() {
+    this.receiptService.setSelectedReceipt(null);
+    this.navigate("add-receipt");
+  }
+
+  gotToReceipt(selectedReceipt: any) {
+    this.receiptService.setSelectedReceipt(selectedReceipt);
     this.navigate("add-receipt");
   }
 
   private calculateTotalAmount() {
     this.totalAmount = this.receiptData.reduce((sum, item) => {
-      console.log("Item Price:", item.price);
       return sum + Number(item.price);
     }, 0);
-    console.log("Total Amount:", this.totalAmount);
   }
 }
