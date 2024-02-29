@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
-import { knownFolders, path } from "tns-core-modules";
-import * as utilities from "tns-core-modules/utils/utils";
+import { knownFolders, path } from "@nativescript/core";
+import * as utilities from "@nativescript/core/utils";
 
 @Component({
   selector: "ns-report",

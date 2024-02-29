@@ -2,7 +2,7 @@ import { Injectable, Injector, inject } from "@angular/core";
 import { ActivatedRoute, NavigationExtras } from "@angular/router";
 import { RouterExtensions } from "@nativescript/angular";
 import { Application, Frame, Page } from "@nativescript/core";
-import { isAndroid } from "tns-core-modules";
+import { isAndroid } from "@nativescript/core";
 import { CameraService } from "~/app/shared/services";
 
 interface NavExtras {
