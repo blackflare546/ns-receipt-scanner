@@ -2,34 +2,26 @@
   <Label text="Report"></Label>
 </ActionBar>
 
-<GridLayout rows="auto,auto,auto" >
+<GridLayout rows="auto,auto,auto">
   <GridLayout
     row="0"
     class="page__content"
     columns="auto, auto"
     rows="auto, auto"
- 
   >
     <Label class="title_label" text="&#xf002;" row="0" col="0"
       >Generate Report</Label
     >
-
   </GridLayout>
 
   <GridLayout row="2" col="0" rows="auto,auto" class="tess">
     <StackLayout row="0" class="stacks-container">
-      <Label text="&#xf002;" class="subtitle" row="1"
-      >Select to Generate</Label
-    >
-      <GridLayout
-        class="stacks-container_box"
-        [ngClass]="{ selected: selectedContainer === 'generatePdf' }"
-        (tap)="onContainerTap('generatePdf')"
-      >
+      <Label text="&#xf002;" class="subtitle" row="1">Select to Generate</Label>
+      <GridLayout class="stacks-container_box" (tap)="generateCSV()">
         <Label
           id="generatePdfLabel"
           class="stacks-container_titles"
-          text="Generate PDF"
+          text="Generate CSV"
         ></Label>
         <label
           class="m-icon m-icon-font-size"
@@ -42,8 +34,7 @@
 
       <GridLayout
         class="stacks-container_box"
-        [ngClass]="{ selected: selectedContainer === 'generateWord' }"
-        (tap)="onContainerTap('generateWord')"
+        [ngClass]="{ disabled: disableGenerateWord }"
       >
         <Label id="generateWordLabel" class="stacks-container_titles"
           >Generate Word</Label
@@ -59,8 +50,7 @@
 
       <GridLayout
         class="stacks-container_box"
-        [ngClass]="{ selected: selectedContainer === 'generateExcel' }"
-        (tap)="onContainerTap('generateExcel')"
+        [ngClass]="{ disabled: disableGenerateExcel }"
       >
         <Label id="generateExcelLabel" class="stacks-container_titles"
           >Generate Excel</Label
@@ -74,22 +64,5 @@
         ></label>
       </GridLayout>
     </StackLayout>
-
-    <GridLayout
-      row="2"
-      class="button"
-      horizontalAlignment="center"
-      verticalAlignment="center"
-    >
-      <Label
-        id="generateExcelLabel"
-        class="Button_title"
-        horizontalAlignment="center"
-        verticalAlignment="center"
-        (tap)="onGenerateTap()"
-        >Generate</Label
-      >
-    </GridLayout>
-        
   </GridLayout>
 </GridLayout>
