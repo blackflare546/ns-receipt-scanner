@@ -69,10 +69,16 @@
     ></TextField>
   </GridLayout>
   <GridLayout rows="auto,auto" class="botton-container">
-    <Button row="0" text="Save" class="botton-container--save" (tap)="onSave()"></Button>
+    <Button
+      row="0"
+      text="Save"
+      class="botton-container--save"
+      *ngIf="!showSaveButton"
+      (tap)="onSave()"
+    ></Button>
     <Button
       row="1"
-      text="Cancel"
+      [text]="buttonText"
       (tap)="back()"
       class="botton-container--cancel"
     ></Button>

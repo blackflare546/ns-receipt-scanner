@@ -41,7 +41,7 @@
             columns="*,auto,*"
             *ngFor="let item of receiptData; let i = index"
             class="receipt-data"
-            (tap)="addReceipt()"
+            (tap)="gotToReceipt(item)"
           >
             <GridLayout row="0" col="1">
               <Label col="1" class="date-container">
