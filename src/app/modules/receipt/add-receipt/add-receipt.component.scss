@@ -25,11 +25,13 @@
   margin-left: 10;
   width: 100%;
   text-align: right;
+  border-bottom-width: 1px;
 }
 
 .field-container {
   padding: 0 10 0 30;
   background-color: #ffffff;
+
   border-radius: 10;
   margin-bottom: 10;
   &__label {
@@ -80,9 +82,8 @@
 }
 
 .text {
-  margin-top: 20px;
+  margin-top: 2 0px;
   text-align: left;
   justify-content: center;
   font-size: large;
 }
-
