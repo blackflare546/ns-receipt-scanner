@@ -69,4 +69,54 @@ Replace `<module-name>` with the name you want to give to your module.
 - For more detailed information on using NativeScript, refer to the official NativeScript documentation: [NativeScript Docs](https://docs.nativescript.org/).
 
 Happy coding! 🚀📱
+
 ```
+ # System Functionality
+
+
+* Dashboard
+  * Users Total Spend
+  * Add Receipt Button
+  * Receipt Lists
+* Add Receipt Screen
+  * Receipt Form
+* Camera
+* Reports
+  * Generate Receipt Report
+
+***
+ 
+
+ ### Dashboard
+![Dashboard](/src//assets/app-screenshot//dashboard-ui.png)
+
+***
+**Users Total Spend** - This component shows the total spend of the users base on the its receipt, it dynamically total its sum everytime the user will add a receipt. 
+
+**Add Receipt Button** - This component will redirect the user to add receipt screen
+
+**Receipt List** - This component shows all the receipt that has been capture/add manualy from the user.
+
+***
+
+ ### Add Receipt Screen
+![Dashboard](/src//assets/app-screenshot//add-receipt-ui.png)
+
+*** 
+**Receipt Form** - This screen shows all the required fields for the user to create an manually generated receipt. 
+***
+
+
+ ### Camera
+![Dashboard](/src//assets/app-screenshot//camera-ui.png)
+
+*** 
+**Camera** - This screen will allow user to capture a receipt.
+***
+
+ ### Reports
+![Dashboard](/src//assets/app-screenshot//report-ui.png)
+
+*** 
+**Camera** - This screen will allow the user to download its record depends on what kind of conversion will be done. It can be generated with the following choices CSV, WORD, and EXCEL.
+***
